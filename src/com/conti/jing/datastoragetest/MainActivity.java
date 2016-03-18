@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.conti.jing.datastoragetest.dbtest.DatabaseActivity;
+
 public class MainActivity extends Activity implements View.OnClickListener {
     private Button mSharedPreferencesButton;
     private Button mInternalStorageButton;
     private Button mExternalStorageButton;
-    private Button mSQLiteDatabaseButton;
+    private Button mDatabaseButton;
     private Button mNetworkConnectionButton;
 
     @Override
@@ -26,7 +28,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mSharedPreferencesButton.setOnClickListener(this);
         mInternalStorageButton.setOnClickListener(this);
         mExternalStorageButton.setOnClickListener(this);
-        mSQLiteDatabaseButton.setOnClickListener(this);
+        mDatabaseButton.setOnClickListener(this);
         mNetworkConnectionButton.setOnClickListener(this);
     }
 
@@ -34,7 +36,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mSharedPreferencesButton = (Button) findViewById(R.id.button_shared_preferences);
         mInternalStorageButton = (Button) findViewById(R.id.button_internal_storage);
         mExternalStorageButton = (Button) findViewById(R.id.button_external_storage);
-        mSQLiteDatabaseButton = (Button) findViewById(R.id.button_sqlite_database);
+        mDatabaseButton = (Button) findViewById(R.id.button_database);
         mNetworkConnectionButton = (Button) findViewById(R.id.button_network_connection);
     }
 
@@ -51,8 +53,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.button_external_storage:
                 startActivity(new Intent(this, ExternalStorageActivity.class));
                 break;
-            case R.id.button_sqlite_database:
-                startActivity(new Intent(this, SQLiteDatabaseActivity.class));
+            case R.id.button_database:
+                startActivity(new Intent(this, DatabaseActivity.class));
                 break;
             case R.id.button_network_connection:
                 startActivity(new Intent(this, NetworkConnectionActivity.class));

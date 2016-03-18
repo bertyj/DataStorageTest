@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_item_add_record"
+        android:icon="@drawable/icon_add_record"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="Add Record"/>
+    <item
+        android:id="@+id/menu_item_export_records"
+        android:icon="@drawable/icon_export_records"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="Export To Excel"/>
+
+</menu>

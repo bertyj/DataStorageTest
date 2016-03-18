@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="23" />
+        android:targetSdkVersion="22" />
 
     <application
         android:allowBackup="true"
@@ -25,7 +25,10 @@
         <activity android:name=".SharedPreferencesActivity" />
         <activity android:name=".InternalStorageActivity" />
         <activity android:name=".ExternalStorageActivity" />
-        <activity android:name=".SQLiteDatabaseActivity" />
+        <activity android:name=".dbtest.DatabaseActivity" />
+        <activity
+            android:name=".dbtest.AddRecordActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
         <activity android:name=".NetworkConnectionActivity" />
     </application>
 
