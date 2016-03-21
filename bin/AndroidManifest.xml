@@ -29,6 +29,9 @@
         <activity
             android:name=".dbtest.AddRecordActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+        <activity
+            android:name=".dbtest.ModifyRecordActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
         <activity android:name=".NetworkConnectionActivity" />
     </application>
 

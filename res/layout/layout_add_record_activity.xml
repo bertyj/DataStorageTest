@@ -6,16 +6,16 @@
     android:padding="@dimen/activity_generic_padding" >
 
     <EditText
-        android:id="@+id/edit_subject"
+        android:id="@+id/edit_subject_add"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:background="@drawable/edit_border"
         android:gravity="center_vertical"
         android:hint="Subject"
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/edit_description"
+        android:id="@+id/edit_description_add"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="10dp"

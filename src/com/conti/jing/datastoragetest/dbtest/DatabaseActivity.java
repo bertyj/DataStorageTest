@@ -9,6 +9,9 @@ import android.support.v4.widget.SimpleCursorAdapter;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -16,7 +19,7 @@ import com.conti.jing.datastoragetest.R;
 import com.conti.jing.datastoragetest.dbutils.DatabaseHelper;
 import com.conti.jing.datastoragetest.dbutils.DatabaseManager;
 
-public class DatabaseActivity extends Activity {
+public class DatabaseActivity extends Activity implements OnItemClickListener {
     private DatabaseManager mDatabaseManager;
     private Cursor mCursor;
 
@@ -41,6 +44,11 @@ public class DatabaseActivity extends Activity {
         setContentView(R.layout.layout_database_activity);
         initDatabase();
         initView();
+        initEvent();
+    }
+
+    private void initEvent() {
+        mListView.setOnItemClickListener(this);
     }
 
     private void initView() {
@@ -83,5 +91,20 @@ public class DatabaseActivity extends Activity {
     }
 
     private void exportRecords(Cursor cursor) {}
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long viewId) {
+        TextView idTextView = (TextView) view.findViewById(R.id.text_id);
+        TextView subjectTextView = (TextView) view.findViewById(R.id.text_subject);
+        TextView descriptionTextView = (TextView) view.findViewById(R.id.text_description);
+        String id = idTextView.getText().toString();
+        String subject = subjectTextView.getText().toString();
+        String description = descriptionTextView.getText().toString();
+        Intent intent = new Intent(this, ModifyRecordActivity.class);
+        intent.putExtra("id", id);
+        intent.putExtra("subject", subject);
+        intent.putExtra("description", description);
+        startActivity(intent);
+    }
 
 }

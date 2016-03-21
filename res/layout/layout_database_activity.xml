@@ -8,7 +8,8 @@
         android:id="@+id/list_view_all_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:dividerHeight="1dp" />
+        android:divider="#FFFFFFFF"
+        android:dividerHeight="5dp" />
 
     <TextView
         android:id="@+id/text_empty"
